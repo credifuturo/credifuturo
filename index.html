@@ -1,14 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Credifuturo - Préstamos en Honduras</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f8fc;
+      color: #1a1a1a;
+    }
+
+    header {
+      background: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    .btn {
+      background: #1976d2;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background: linear-gradient(120deg, #1976d2, #42a5f5);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .map {
+      margin-top: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 60px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <img src="logotipo.png" alt="Credifuturo">
+  <a href="#" class="btn">Solicitar préstamo</a>
+</header>
+
+<section class="hero">
+  <h1>Credifuturo</h1>
+  <p>Préstamos rápidos y seguros en Honduras</p>
+  <a href="#" class="btn">Hablar por WhatsApp</a>
+</section>
+
 <section class="section">
-  <h2 style="text-align:center;">Historias de éxito de nuestros clientes</h2>
+  <h2 style="text-align:center;">Nuestros servicios</h2>
+
   <div class="cards">
     <div class="card">
-      <img src="foto1.jpg" alt="Persona feliz con dinero" style="width:100%; border-radius:10px;">
+      <h3>Préstamos personales</h3>
+      <p>Soluciones rápidas para tus necesidades diarias.</p>
     </div>
+
     <div class="card">
-      <img src="foto2.jpg" alt="Cliente satisfecho con resultados financieros" style="width:100%; border-radius:10px;">
+      <h3>Crédito para emprendedores</h3>
+      <p>Impulsa tu negocio con financiamiento flexible.</p>
     </div>
+
     <div class="card">
-      <img src="foto3.jpg" alt="Persona celebrando éxito financiero" style="width:100%; border-radius:10px;">
+      <h3>Préstamos express</h3>
+      <p>Aprobación en minutos, sin complicaciones.</p>
     </div>
   </div>
 </section>
+
+<section class="section">
+  <h2 style="text-align:center;">Ubicación</h2>
+
+  <div class="map">
+    <iframe 
+      src="https://www.google.com/maps?q=centro%20de%20tegucigalpa&output=embed"
+      width="100%" 
+      height="350" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Credifuturo - Préstamos en Honduras</p>
+</footer>
+
+<a href="#" class="whatsapp">💬 WhatsApp</a>
+
+</body>
+</html>
+
+
