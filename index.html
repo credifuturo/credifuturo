@@ -1,164 +1,139 @@
+
+     
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Credifuturo - Préstamos en Honduras</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>CrediFuturo Honduras</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f8fc;
-      color: #1a1a1a;
-    }
+  #mainSVG {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+  }
 
-    header {
-      background: white;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-    }
+  .strip {
+    fill: #1e90ff;
+  }
 
-    header img {
-      height: 45px;
-    }
+  @keyframes slideDown {
+    0% { transform: translateY(-600px); }
+    100% { transform: translateY(0); }
+  }
 
-    .btn {
-      background: #1976d2;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-    }
+  #stripContainer .strip {
+    animation: slideDown 3s linear infinite;
+  }
 
-    .hero {
-      text-align: center;
-      padding: 90px 20px;
-      background: linear-gradient(120deg, #1976d2, #42a5f5);
-      color: white;
-    }
+  .map-container {
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+  iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 10px;
+  }
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
+  /* Botón flotante */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 25px;
+    font-size: 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    z-index: 1000;
+  }
 
-    .section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    .map {
-      margin-top: 40px;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    footer {
-      background: #0d47a1;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      margin-top: 60px;
-    }
-
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #25d366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-  </style>
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  }
+</style>
 </head>
-
 <body>
 
-<header>
-  <img src="logotipo.png" alt="Credifuturo">
-  <a href="#" class="btn">Solicitar préstamo</a>
-</header>
+<!-- SVG animado -->
+<svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <clipPath id="mainMask">
+      <circle cx="400" cy="300" r="280" />
+    </clipPath>
 
-<section class="hero">
-  <h1>Credifuturo</h1>
-  <p>Préstamos rápidos y seguros en Honduras</p>
-  <a href="#" class="btn">Hablar por WhatsApp</a>
-</section>
+    <g id="stripContainer">
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+      <rect class="strip" x="-80" y="-600" width="80" height="1800"/>
+    </g>
 
-<section class="section">
-  <h2 style="text-align:center;">Nuestros servicios</h2>
+    <path id="dollarsUse" d="M391.59,388.14c-36.09-3.41-62.91-21.7-65.1-56.57h57.54c.49,7.31,3.41,11.46,7.56,13.65v-23.89c-26.82-7.31-65.59-15.6-65.59-57.3,0-32.92,29.99-50.96,65.59-52.42v-19.75h15.12v19.75c38.28,2.68,62.17,21.7,64.37,55.59h-58.27c-.73-6.58-2.93-10.48-6.1-12.44v23.65c26.58,8.53,67.3,16.58,67.3,57.54,0,28.77-23.89,51.69-67.3,52.67v19.51h-15.12v-19.99Zm0-115.82v-19.51c-4.88,.98-7.56,3.9-7.56,8.78s2.93,8.05,7.56,10.73Zm15.12,54.13v20.97c5.61-1.22,9.51-4.39,9.51-10.24,0-4.88-3.66-8.05-9.51-10.73Z" />
 
-  <div class="cards">
-    <div class="card">
-      <h3>Préstamos personales</h3>
-      <p>Soluciones rápidas para tus necesidades diarias.</p>
-    </div>
+    <mask id="eMask">
+      <use href="#dollarsUse" id="dollars" fill="#FFF" />
+    </mask>
 
-    <div class="card">
-      <h3>Crédito para emprendedores</h3>
-      <p>Impulsa tu negocio con financiamiento flexible.</p>
-    </div>
+    <mask id="eStrokeMask">
+      <use class="maskFill" href="#stripContainer"/>
+      <use href="#dollarsUse" y="10" id="dollarsStroke" fill="#FFF"/>
+    </mask>
+  </defs>
 
-    <div class="card">
-      <h3>Préstamos express</h3>
-      <p>Aprobación en minutos, sin complicaciones.</p>
-    </div>
-  </div>
-</section>
+  <g clip-path="url(#mainMask)">
+    <use href="#stripContainer" />
+    <g mask="url(#eStrokeMask)">
+      <use id="maskStroke" href="#stripContainer" />
+    </g>
+  </g>
 
-<section class="section">
-  <h2 style="text-align:center;">Ubicación</h2>
+  <g mask="url(#eMask)">
+    <use class="maskFill" href="#stripContainer" />
+  </g>
+</svg>
 
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps?q=centro%20de%20tegucigalpa&output=embed"
-      width="100%" 
-      height="350" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
+<!-- Mapa de Tegucigalpa -->
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.774985288829!2d-87.211503!3d14.072275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6f987a72e51d13%3A0x1234567890abcdef!2sTegucigalpa!5e0!3m2!1ses!2shn!4v1610000000000!5m2!1ses!2shn" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
 
-<footer>
-  <p>© 2026 Credifuturo - Préstamos en Honduras</p>
-</footer>
-
-<a href="#" class="whatsapp">💬 WhatsApp</a>
+<!-- Botón flotante de WhatsApp -->
+<a class="whatsapp-btn" href="#" target="_blank">WhatsApp</a>
 
 </body>
 </html>
+
+
 
 
